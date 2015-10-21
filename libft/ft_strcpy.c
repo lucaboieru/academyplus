@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/20 19:40:21 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 14:00:59 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/21 10:01:16 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/21 11:37:54 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libft.h"
-
-int		main(void)
+char	*ft_strcpy(char *dst, const char *src)
 {
-	char	s1[100] = {'H', 'e', 'l', 'l', 'o', 0};
-	char	s2[100] = {'W', 'o', 'r', 'l', 'd', '\n', 0};
+	int		i;
 
-	printf("%s\n", ft_strncat(s1, s2, 3));
-	return (0);
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		++i;
+	}
+	dst[i] = 0;
+	return (dst);
 }

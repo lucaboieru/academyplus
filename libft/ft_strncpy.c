@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/20 19:40:21 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 14:00:59 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/21 11:07:09 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/21 11:17:49 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int		main(void)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	char	s1[100] = {'H', 'e', 'l', 'l', 'o', 0};
-	char	s2[100] = {'W', 'o', 'r', 'l', 'd', '\n', 0};
+	size_t	i;
 
-	printf("%s\n", ft_strncat(s1, s2, 3));
-	return (0);
+	i = 0;
+	while (i < n)
+	{
+		if (src[i])
+			dst[i] = src[i];
+		else
+			dst[i] = 0;
+		++i;
+	}
+	dst[i] = 0;
+	return (dst);
 }

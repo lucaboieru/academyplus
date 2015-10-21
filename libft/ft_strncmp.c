@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/20 19:40:21 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 14:00:59 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/21 11:41:07 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/21 13:19:38 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int		main(void)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	s1[100] = {'H', 'e', 'l', 'l', 'o', 0};
-	char	s2[100] = {'W', 'o', 'r', 'l', 'd', '\n', 0};
+	size_t	i;
+	
+	// Hello Aorld!
+	// Hello World!
+	// 0123456789
 
-	printf("%s\n", ft_strncat(s1, s2, 3));
-	return (0);
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n - 1)
+		++i;
+	return (s1[i] - s2[i]);
 }
