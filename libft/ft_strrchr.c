@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/21 18:25:40 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 18:34:20 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/21 22:44:13 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	char	*new;
-	
+
 	new = NULL;
 	while (*s)
 	{

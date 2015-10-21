@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/20 19:40:21 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 18:34:32 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/21 18:44:54 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/21 18:48:18 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
-int		main(void)
+void	*ft_bzero(void *b, size_t n)
 {
-	char	s1[100] = "Hello ";
-	
-	printf("%s\n%s\n", ft_strrchr(s1, '\0'), strrchr(s1, '\0'));
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		*((unsigned char*)(b + i)) = 0;
+		++i;
+	}
+	return (b);
 }
