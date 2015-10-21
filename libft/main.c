@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/20 19:40:21 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 14:00:59 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/21 18:34:32 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,8 @@
 
 int		main(void)
 {
-	char	s1[100] = {'H', 'e', 'l', 'l', 'o', 0};
-	char	s2[100] = {'W', 'o', 'r', 'l', 'd', '\n', 0};
-
-	printf("%s\n", ft_strncat(s1, s2, 3));
+	char	s1[100] = "Hello ";
+	
+	printf("%s\n%s\n", ft_strrchr(s1, '\0'), strrchr(s1, '\0'));
 	return (0);
 }
