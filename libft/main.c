@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/20 19:40:21 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/20 21:29:00 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/21 09:29:16 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 int		main(void)
 {
-	printf("%c\n", ft_tolower('Z'));
-	printf("%c\n", ft_tolower('4'));
-	printf("%c\n", ft_tolower('D'));
-	printf("%c\n", ft_tolower(' '));
-	printf("%c\n", ft_tolower('A'));
+	printf("%d -> %s\n", (int)ft_strlen("hello world\n"), ft_strdup("hello world\n"));
 	return (0);
 }

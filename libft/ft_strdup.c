@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/20 19:47:42 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 08:52:27 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/21 08:59:36 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/21 09:26:27 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
-{
-	int		final_val;
-	int		is_negative;
-	long	val;
+#include "libft.h"
 
-	val = 0;
-	is_negative = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		++str;
-	if (*str == '+')
-		++str;
-	else if (*str == '-')
+char	*ft_strdup(const char *s1)
+{
+	char	*new;
+	int		i;
+
+	i = 0;
+	new = (char *)malloc(sizeof(*new) * (ft_strlen(s1) + 1));
+	while (s1[i])
 	{
-		++str;
-		is_negative = 1;
+		new[i] = s1[i];
+		++i;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		val = val * 10 + ((*str) - '0');
-		++str;
-	}
-	if (is_negative)
-		val = -val;
-	final_val = val;
-	return (final_val);
+	new[i] = 0;
+	return (new);
 }

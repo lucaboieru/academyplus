@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/20 19:47:42 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/21 08:52:27 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/21 08:46:24 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/21 08:50:50 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(const char *str)
+int		ft_isascii(int c)
 {
-	int		final_val;
-	int		is_negative;
-	long	val;
-
-	val = 0;
-	is_negative = 0;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
-		++str;
-	if (*str == '+')
-		++str;
-	else if (*str == '-')
-	{
-		++str;
-		is_negative = 1;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		val = val * 10 + ((*str) - '0');
-		++str;
-	}
-	if (is_negative)
-		val = -val;
-	final_val = val;
-	return (final_val);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
