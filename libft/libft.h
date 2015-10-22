@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/20 19:22:13 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/22 10:29:06 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/22 14:39:16 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strstr(const char *s1, const char *s2);
+char	*ft_strnstr(const char *dst, const char *src, size_t n);
 
 void	*ft_memset(void *b, int c, size_t len);
 void	*ft_bzero(void *b, size_t n);

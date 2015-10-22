@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/22 08:51:55 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/22 10:37:52 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/22 14:47:50 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 int		main(void)
 {
-	char	a[] = "";
-	char	c[] = "";
+	char	a[] = "hello world!";
+	char	c[] = "llo";
 
-	printf("%s\n", ft_strstr(a, c));
-	printf("%s\n", strstr(a, c));
+	printf("%s\n", ft_strnstr(a, c, 5));
+	printf("%s\n", strnstr(a, c, 5));
 	return (0);
 }
