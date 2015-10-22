@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 	size_t	j;
 	int		ok;
 	
-	if (!s2)
+	if (!(*s2))
 		return ((char *)s1);
 	i = 0;
 	while (*(s1 + i))
@@ -31,10 +31,20 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 				ok = 0;
 			++j;
 		}
-		if (!ok)
+		if (!ok && i + j < n)
 			++i;
 		else
 			return ((char *)s1 + i);
 	}
 	return (NULL);
+}
+
+int     main(void)
+{
+    char    a[100] = "hello";
+    char    b[100] = "hello";
+
+    printf("%s\n%s\n", ft_strnstr(a, b, 3), strnstr(a, b, 3));
+    
+    return (0);
 }
