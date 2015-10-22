@@ -14,37 +14,16 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	size_t	j;
-	int		ok;
+	size_t	src_len;
 	
 	if (!(*s2))
 		return ((char *)s1);
-	i = 0;
-	while (*(s1 + i))
+    src_len = ft_strlen(s2);
+	while (*s1 && n-- >= src_len)
 	{
-		j = 0;
-		ok = 1;
-		while (*(s2 + j) && *(s1 + i + j) && i + j < n)
-		{
-			if (*(s1 + i + j) != *(s2 + j))
-				ok = 0;
-			++j;
-		}
-		if (!ok && i + j < n)
-			++i;
-		else
-			return ((char *)s1 + i);
+        if (!ft_memcmp(s1, s2, src_len))
+		    return ((char *)s1);
+        ++s1;
 	}
 	return (NULL);
-}
-
-int     main(void)
-{
-    char    a[100] = "hello";
-    char    b[100] = "hello";
-
-    printf("%s\n%s\n", ft_strnstr(a, b, 3), strnstr(a, b, 3));
-    
-    return (0);
 }
