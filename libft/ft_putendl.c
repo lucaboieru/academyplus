@@ -5,16 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/23 11:14:53 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/23 13:29:09 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/23 16:56:48 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/23 16:56:49 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putendl(char const *s)
+void	ft_putendl(char const *s)
 {
-    while (*s)
-        write(1, s++, 1);
-    write(1, "\n", 1);
+	while (*s)
+		write(1, s++, 1);
+	write(1, "\n", 1);
 }

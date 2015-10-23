@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/21 18:44:54 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/23 13:24:28 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/23 16:56:17 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/23 16:56:19 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_bzero(void *b, size_t n)
+void	ft_bzero(void *b, size_t n)
 {
 	size_t	i;
 

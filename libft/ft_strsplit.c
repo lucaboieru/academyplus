@@ -1,20 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/10/23 16:56:56 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/23 16:56:57 by lboieru          ###   ########.fr       */
+/*   Created: 2015/10/23 16:57:48 by lboieru           #+#    #+#             */
+/*   Updated: 2015/10/23 16:58:10 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putendl_fd(char const *s, int fd)
+char	**ft_strsplit(char const *s, char c)
 {
-	while (*s)
-		write(fd, s++, 1);
-	write(fd, "\n", 1);
+
 }

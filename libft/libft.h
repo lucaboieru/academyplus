@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/20 19:22:13 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/23 14:59:46 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/23 16:58:36 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ void    ft_putstr_fd(char const *s, int fd);
 void    ft_putendl_fd(char const *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
 char	*ft_itoa(int n);
+char	**ft_strsplit(char const *s, char c);
 
 #endif

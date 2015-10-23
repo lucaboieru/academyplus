@@ -6,7 +6,7 @@
 /*   By: lboieru <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/10/22 10:01:41 by lboieru           #+#    #+#             */
-/*   Updated: 2015/10/22 10:38:36 by lboieru          ###   ########.fr       */
+/*   Updated: 2015/10/23 16:45:56 by lboieru          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strstr(const char *s1, const char *s2)
 	int		i;
 	int		j;
 	int		ok;
-	
+
 	if (!(*s2))
 		return ((char *)s1);
 	i = 0;
